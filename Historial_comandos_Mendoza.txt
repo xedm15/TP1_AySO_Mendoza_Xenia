@@ -1,0 +1,53 @@
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+cd repogit
+pwd
+ls -la
+git clone git@github.com:xedm15/TP1_AySO_Mendoza_Xenia.git
+cd TP1_AySO_Mendoza_Xenia/
+pwd
+ls -l
+cat /etc/os-release
+man grep
+grep HOME-URL /etc/os-release
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i Home_url /etc/os-release
+grep -i Home_url /etc/os-release > datos_url.txt
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+git add
+ls
+git add .
+git config --global user.email "mendozaxenia02@gmail.com"
+git config --global user.name "xedm15"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+git push
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+git add .
+git commit -m "feat: Añadiendo informacion de CPU"
+git push
+cat <<EOF >> README.md
+Alumno: Mendoza Xenia
+División: 212
+Turno: Tarde
+EOF
+
+git add README.txt datos_usuarios.txt
+git add README.md datos_usuarios.txt
+git add README.md datos_usuario.txt
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+cd
+mkdir -p {materia1,materia2}/uni{1..3}
+cd repogit/
+cd TP1_AySO_Mendoza_Xenia/
+echo "mkdir -p {materia1,materia2}/uni{1..3}" > script_dir.sh
+chmod +x script_dir.sh
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
